@@ -4,6 +4,7 @@ module.exports = {
 	},
 
 	create(req, res) {
-		res.send({ created: true });
+		console.log(req.body);
+		res.send({ hi: 'there' });
 	},
 };
