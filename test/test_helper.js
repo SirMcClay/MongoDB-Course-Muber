@@ -12,3 +12,11 @@ before((done) => {
 			console.warn('Warning', error);
 		});
 });
+
+beforeEach((done) => {
+	const { drivers } = mongoose.connection.collections;
+	drivers
+		.drop()
+		.then(() => done())
+		.catch(() => done()); // this is for first test run - because drivers collection does not existis
+});
