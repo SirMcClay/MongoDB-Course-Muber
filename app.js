@@ -10,7 +10,9 @@ const options = {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
 };
-mongoose.connect('mongodb://localhost/muber', options);
+if (process.env.NODE_ENV !== 'test') {
+	mongoose.connect('mongodb://localhost/muber', options);
+}
 
 app.use(bodyParser.json());
 routes(app);
