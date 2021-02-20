@@ -9,6 +9,7 @@ mongoose.Promise = global.Promise;
 const options = {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
+	useFindAndModify: false,
 };
 if (process.env.NODE_ENV !== 'test') {
 	mongoose.connect('mongodb://localhost/muber', options);
