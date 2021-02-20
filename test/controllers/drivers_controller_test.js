@@ -58,7 +58,7 @@ describe('Drivers controller', () => {
 		});
 		const miamiDriver = new Driver({
 			email: 'miami@test.com',
-			geometry: { type: 'Point', coordinates: [-80.253, 25.791] },
+			geometry: { type: 'Point', coordinates: [-80.2534507, 25.791581] },
 		});
 
 		Promise.all([seattleDriver.save(), miamiDriver.save()]).then(() => {
